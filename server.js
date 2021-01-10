@@ -5,12 +5,8 @@ const exphbs = require("express-handlebars");
 // Create an instance of the express app.
 const app = express();
 
-// Set the port of our application
-// process.env.PORT lets the port be set by Heroku
 const PORT = process.env.PORT || 8080;
 
-
-// Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
